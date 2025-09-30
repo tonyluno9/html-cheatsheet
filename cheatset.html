@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <title>Cheat Sheet HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+</head>
+<body>
+  <div class="wrap">
+    <h1>Cheat Sheet de HTML </h1>
+
+    <div class="text">
+      <strong>Tip de examen:</strong> recuerda que las etiquetas semánticas (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, etc.)
+      ayudan a accesibilidad y SEO. <br>
+      
+    </div>
+
+    <!-- 1) Documento y estructura básica -->
+    <details class="category">
+      <summary>1) Documento y estructura básica</summary>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">&lt;!DOCTYPE html&gt;</div>
+          <div class="desc">Indica al navegador que el documento sigue el estándar HTML5.</div>
+          <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;html&gt;</div>
+          <div class="desc">Elemento raíz que envuelve todo el documento (excepto el doctype).</div>
+          <pre><code>&lt;html lang="es"&gt;
+  
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;head&gt;</div>
+          <div class="desc">Contiene metadatos: codificación, título, enlaces a CSS/JS, meta etiquetas.</div>
+          <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Mi página&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;body&gt;</div>
+          <div class="desc">Incluye todo el contenido visible (texto, imágenes, secciones, formularios, etc.).</div>
+          <pre><code>&lt;body&gt;
+  &lt;h1&gt;Hola, mundo&lt;/h1&gt;
+&lt;/body&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;title&gt;</div>
+          <div class="desc">Define el título que aparece en la pestaña del navegador o al marcar favoritos.</div>
+          <pre><code>&lt;head&gt;
+  &lt;title&gt;Portafolio de Ana&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <!-- 2) Secciones semánticas -->
+    <details class="category">
+      <summary>2) Secciones semánticas</summary>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">&lt;header&gt;</div>
+          <div class="desc">Encabezado de una página o sección. Suele contener logotipo, título y/o navegación principal.</div>
+          <pre><code>&lt;header&gt;
+  &lt;h1&gt;Mi Blog&lt;/h1&gt;
+  &lt;p&gt;Historias y tutoriales&lt;/p&gt;
+&lt;/header&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;nav&gt;</div>
+          <div class="desc">Bloque de enlaces de navegación (principal o secundaria).</div>
+          <pre><code>&lt;nav aria-label="Principal"&gt;
+  &lt;a href="/"&gt;Inicio&lt;/a&gt;
+  &lt;a href="/articulos"&gt;Artículos&lt;/a&gt;
+  &lt;a href="/contacto"&gt;Contacto&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;main&gt;</div>
+          <div class="desc">Contenido principal único de la página (debe haber solo un &lt;main&gt; por documento).</div>
+          <pre><code>&lt;main&gt;
+  &lt;article&gt;&lt;/article&gt;
+&lt;/main&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;aside&gt;</div>
+          <div class="desc">Contenido complementario o lateral (widgets, anuncios, enlaces relacionados).</div>
+          <pre><code>&lt;aside&gt;
+  &lt;h2&gt;Populares&lt;/h2&gt;
+  &lt;ul&gt;&lt;li&gt;Post A&lt;/li&gt;&lt;/ul&gt;
+&lt;/aside&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;footer&gt;</div>
+          <div class="desc">Pie de página. Suele incluir derechos, enlaces legales o información de contacto.</div>
+          <pre><code>&lt;footer&gt;
+  &copy; 2025 Mi Sitio — &lt;a href="/privacidad"&gt;Privacidad&lt;/a&gt;
+&lt;/footer&gt;</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <!-- 3) Texto, contenedores y enlaces -->
+    <details class="category">
+      <summary>3) Texto, contenedores y enlaces</summary>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">&lt;h1&gt; – &lt;h6&gt;</div>
+          <div class="desc">Encabezados jerárquicos del más importante (&lt;h1&gt;) al menos (&lt;h6&gt;). Útiles para SEO y estructura.</div>
+          <pre><code>&lt;h1&gt;Título de la página&lt;/h1&gt;
+&lt;h2&gt;Sección&lt;/h2&gt;
+&lt;h3&gt;Subsección&lt;/h3&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;p&gt;</div>
+          <div class="desc">Párrafo de texto.</div>
+          <pre><code>&lt;p&gt;Este es un párrafo con una idea completa.&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;span&gt;</div>
+          <div class="desc">Contenedor <em>en línea</em> para aplicar estilos o agrupar texto sin romper el flujo.</div>
+          <pre><code>&lt;p&gt;Precio: &lt;span style="color:#0bd67a"&gt;$199&lt;/span&gt;&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;div&gt;</div>
+          <div class="desc">Contenedor <em>en bloque</em> genérico para agrupar elementos.</div>
+          <pre><code>&lt;div class="tarjeta"&gt;
+  &lt;h3&gt;Curso HTML&lt;/h3&gt;
+  &lt;p&gt;Aprende desde cero.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;a&gt;</div>
+          <div class="desc">Enlace a otra página, sección o recurso. Usa <code>href</code>; <code>target="_blank"</code> abre en nueva pestaña.</div>
+          <pre><code>&lt;a href="https://developer.mozilla.org/" target="_blank" rel="noopener"&gt;
+  Documentación MDN
+&lt;/a&gt;</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <!-- 4) Listas y definiciones -->
+    <details class="category">
+      <summary>4) Listas y definiciones</summary>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">&lt;ol&gt;</div>
+          <div class="desc">Lista <strong>ordenada</strong> (numerada).</div>
+          <pre><code>&lt;ol&gt;
+  &lt;li&gt;Instalar&lt;/li&gt;
+  &lt;li&gt;Configurar&lt;/li&gt;
+  &lt;li&gt;Ejecutar&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;ul&gt;</div>
+          <div class="desc">Lista <strong>desordenada</strong> (viñetas).</div>
+          <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JS&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;dl&gt;</div>
+          <div class="desc">Lista de definiciones (término y descripción). <em>(Etiqueta correcta en vez de &lt;di&gt;)</em></div>
+          <pre><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Lenguaje de marcado para la web.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;li&gt;</div>
+          <div class="desc">Elemento de lista dentro de &lt;ol&gt; o &lt;ul&gt;.</div>
+          <pre><code>&lt;ul&gt;
+  &lt;li&gt;Elemento A&lt;/li&gt;
+  &lt;li&gt;Elemento B&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;dt&gt;</div>
+          <div class="desc">Término dentro de una lista de definiciones (&lt;dl&gt;).</div>
+          <pre><code>&lt;dl&gt;
+  &lt;dt&gt;API&lt;/dt&gt;
+  &lt;dd&gt;Interfaz para que programas se comuniquen.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;dd&gt;</div>
+          <div class="desc">Descripción del término (&lt;dt&gt;) dentro de &lt;dl&gt;.</div>
+          <pre><code>&lt;dl&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Hojas de estilo en cascada.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <!-- 5) Tablas -->
+    <details class="category">
+      <summary>5) Tablas</summary>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">&lt;table&gt;</div>
+          <div class="desc">Tabla que organiza datos en filas y columnas.</div>
+          <pre><code>&lt;table&gt;&lt;/table&gt;</code></pre>
+          <div class="hint">Usa &lt;caption&gt; para un título opcional de la tabla.</div>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;thead&gt;</div>
+          <div class="desc">Sección de encabezado de la tabla. Suele contener los títulos de columna.</div>
+          <pre><code>&lt;thead&gt;
+  &lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Edad&lt;/th&gt;&lt;/tr&gt;
+&lt;/thead&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;tbody&gt;</div>
+          <div class="desc">Cuerpo principal de datos de la tabla.</div>
+          <pre><code>&lt;tbody&gt;
+  &lt;tr&gt;&lt;td&gt;Ana&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;tfoot&gt;</div>
+          <div class="desc">Pie de la tabla (sumas, totales u observaciones).</div>
+          <pre><code>&lt;tfoot&gt;
+  &lt;tr&gt;&lt;td colspan="2"&gt;Total: 1 registro&lt;/td&gt;&lt;/tr&gt;
+&lt;/tfoot&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;tr&gt;</div>
+          <div class="desc">Table Row: fila de la tabla.</div>
+          <pre><code>&lt;tr&gt;
+  &lt;td&gt;Dato1&lt;/td&gt;&lt;td&gt;Dato2&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;th&gt;</div>
+          <div class="desc">Table Header: celda de encabezado (por defecto en negrita/centrado).</div>
+          <pre><code>&lt;tr&gt;
+  &lt;th scope="col"&gt;Producto&lt;/th&gt;
+  &lt;th scope="col"&gt;Precio&lt;/th&gt;
+&lt;/tr&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;td&gt;</div>
+          <div class="desc">Table Data: celda de datos.</div>
+          <pre><code>&lt;tr&gt;
+  &lt;td&gt;Teclado&lt;/td&gt;&lt;td&gt;$500&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+        </div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:1fr;">
+        <div class="card">
+          <div class="tag">Ejemplo completo de tabla</div>
+          <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Edad&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Ana&lt;/td&gt;&lt;td&gt;20&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Luis&lt;/td&gt;&lt;td&gt;22&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td colspan="2"&gt;Promedio: 21&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <!-- 6) Multimedia -->
+    <details class="category">
+      <summary>6) Multimedia</summary>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">&lt;img&gt;</div>
+          <div class="desc">Inserta una imagen. <code>alt</code> describe la imagen para accesibilidad.</div>
+          <pre><code>&lt;img src="foto.jpg" alt="Persona sonriendo" width="320" height="180"&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;audio&gt;</div>
+          <div class="desc">Inserta audio. Con <code>controls</code> muestra los controles del reproductor.</div>
+          <pre><code>&lt;audio controls&gt;
+  &lt;source src="tema.mp3" type="audio/mpeg"&gt;
+  Tu navegador no soporta audio.
+&lt;/audio&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;video&gt;</div>
+          <div class="desc">Inserta video. Acepta atributos como <code>controls</code>, <code>autoplay</code>, <code>loop</code>.</div>
+          <pre><code>&lt;video width="400" controls&gt;
+  &lt;source src="intro.mp4" type="video/mp4"&gt;
+  Tu navegador no soporta video.
+&lt;/video&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;source&gt;</div>
+          <div class="desc">Define una fuente de medios alternativa dentro de &lt;audio&gt; o &lt;video&gt; (diferentes formatos).</div>
+          <pre><code>&lt;video controls&gt;
+  &lt;source src="clip.webm" type="video/webm"&gt;
+  &lt;source src="clip.mp4"  type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <!-- 7) Formularios -->
+    <details class="category">
+      <summary>7) Formularios</summary>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">&lt;form&gt;</div>
+          <div class="desc">Agrupa controles de entrada. Usa <code>action</code> (destino) y <code>method</code> (GET/POST).</div>
+          <pre><code>&lt;form action="/buscar" method="get"&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;label&gt;</div>
+          <div class="desc">Etiqueta para un control de formulario. Asocia con <code>for</code> = id del control.</div>
+          <pre><code>&lt;label for="email"&gt;Correo:&lt;/label&gt;
+&lt;input id="email" type="email"&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;input&gt;</div>
+          <div class="desc">Campo de entrada. Tipos comunes: <code>text</code>, <code>email</code>, <code>number</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, <code>date</code>, etc.</div>
+          <pre><code>&lt;input type="text" name="nombre" placeholder="Tu nombre" required&gt;
+&lt;input type="checkbox" name="acepto"&gt; Acepto
+&lt;input type="radio" name="plan" value="pro"&gt; Pro</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;select&gt; &amp; &lt;option&gt;</div>
+          <div class="desc">Lista desplegable de opciones.</div>
+          <pre><code>&lt;label for="pais"&gt;País:&lt;/label&gt;
+&lt;select id="pais" name="pais"&gt;
+  &lt;option value="mx"&gt;México&lt;/option&gt;
+  &lt;option value="ar"&gt;Argentina&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <div class="tag">&lt;textarea&gt;</div>
+          <div class="desc">Área de texto multilínea.</div>
+          <pre><code>&lt;textarea name="mensaje" rows="4" cols="30" placeholder="Escribe tu mensaje..."&gt;&lt;/textarea&gt;</code></pre>
+        </div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:1fr;">
+        <div class="card">
+          <div class="tag">Ejemplo completo de formulario</div>
+          <pre><code>&lt;form action="/registro" method="post"&gt;
+  &lt;label for="user"&gt;Usuario&lt;/label&gt;
+  &lt;input id="user" name="user" type="text" required&gt;
+
+  &lt;label for="mail"&gt;Correo&lt;/label&gt;
+  &lt;input id="mail" name="mail" type="email" required&gt;
+
+  &lt;label for="pais"&gt;País&lt;/label&gt;
+  &lt;select id="pais" name="pais"&gt;
+    &lt;option value="mx"&gt;México&lt;/option&gt;
+    &lt;option value="es"&gt;España&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;label for="bio"&gt;Bio&lt;/label&gt;
+  &lt;textarea id="bio" name="bio" rows="3"&gt;&lt;/textarea&gt;
+
+  &lt;input type="submit" value="Crear cuenta"&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <footer class="page"> 
+    Angel Antonio Perez Reyes  
+    </footer>
+  </div>
+
+ 
+</body>
+</html>

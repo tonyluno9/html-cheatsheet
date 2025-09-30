@@ -1,0 +1,203 @@
+ :root {
+   --bg: #272932;
+   --card: #151836;
+   --ink: #e6e9ff;
+   --muted: #aab0d6;
+   --accent: #7aa2ff;
+   --border: #283056;
+   --code: #0b0e1d;
+   --ok: #79d29d;
+ }
+
+ * {
+   box-sizing: border-box
+ }
+
+ body {
+   padding: 24px;
+   font-family: Inter, system-ui, Segoe UI, Arial;
+   background:var(--bg);
+   color: var(--ink);
+ } 
+
+ h1 {
+  position: sticky;
+  top: 0%;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 10px;
+  margin: 0;
+  z-index: 10;
+  text-align: center;
+  color: cyan;
+ }
+
+ .wrap {
+   max-width: 1000px;
+   margin: 0 auto;
+ }
+
+ .toolbar {
+   display: flex;
+   gap: 8px;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-bottom: 16px
+ }
+
+ .btn:hover {
+   border-color: var(--accent)
+ }
+
+ .note {
+   background: #12213a;
+   border: 1px dashed var(--accent);
+   color: var(--ink);
+   padding: 10px 12px;
+   border-radius: 10px;
+   margin: 12px 0 18px;
+   font-size: .95rem
+ }
+
+ details.category {
+   background: var(--card);
+   border: 1px solid var(--border);
+   border-radius: 14px;
+   margin: 12px 0;
+   overflow: hidden;
+ }
+
+ summary {
+   padding: 14px 18px;
+   font-weight: 800;
+   cursor: pointer;
+   list-style: none;
+   position: relative
+ }
+
+ summary::marker {
+   display: none
+ }
+
+ summary:after {
+   content: "▸";
+   position: absolute;
+   right: 16px;
+   top: 12px;
+   font-weight: 800;
+   color: var(--muted);
+   transition: transform .2s ease;
+ }
+
+ details[open]>summary:after {
+   transform: rotate(90deg);
+   color: var(--accent)
+ }
+
+ .grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 12px;
+   padding: 0 14px 14px;
+ }
+
+ .card {
+   border: 1px solid var(--border);
+   border-radius: 12px;
+   padding: 12px;
+   background: #121630;
+ }
+
+ .tag {
+   display: inline-block;
+   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono";
+   background: #1a2044;
+   border: 1px solid #2b3369;
+   color: #cfe0ff;
+   padding: 2px 8px;
+   border-radius: 8px;
+   font-size: .95rem;
+   margin-bottom: 8px
+ }
+
+ .desc {
+   color: var(--muted);
+   line-height: 1.45;
+   margin: 8px 0 10px
+ }
+
+ pre {
+   background: var(--code);
+   padding: 10px;
+   border-radius: 10px;
+   overflow: auto;
+   border: 1px solid #1d2242;
+   margin: 0;
+ }
+
+ code {
+   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono";
+   font-size: .95rem
+ }
+
+ .hint {
+   font-size: .85rem;
+   color: #9fd0ff;
+   margin-top: 8px
+ }
+
+ .key {
+   color: var(--ok);
+   font-weight: 700
+ }
+
+ footer.page {
+   text-align: center;
+   color: var(--muted);
+   margin-top: 18px;
+   font-size: .9rem
+ }
+
+ @media (prefers-color-scheme: light) {
+   :root {
+     --bg: #f7f7fb;
+     --card: #ffffff;
+     --ink: #1c2033;
+     --muted: #475070;
+     --accent: #2456e6;
+     --border: #e8eaf4;
+     --code: #0f1221;
+   }
+
+   .note {
+     background: #f1f4ff
+   }
+
+   .tag {
+     background: #eef2ff;
+     color: #142152;
+     border-color: #dfe5ff
+   }
+
+   pre {
+     color: #e8edff
+   }
+ }
+
+@keyframes show {
+  from {
+    opacity: 0; scale: 10%;
+  }
+  to {
+    opacity: 1; scale: 100%;
+  }
+ }
+
+details {
+view-timeline-name: --reveal;
+animation-name: show;
+animation-fill-mode: both;
+
+animation-timeline: --reveal;
+animation-range: entry 5% cover 10%;
+}
